@@ -15,7 +15,7 @@ h1 {
 }
 
 .div-row {
-    background-image: url('/images/bg-shorten-desktop.svg');
+    background-image: url('./images/bg-shorten-desktop.svg');
     border-radius: 15px;
 }
 
@@ -67,7 +67,7 @@ hr {
 }
 
 .section2 {
-    background-image: url("/images/bg-boost-desktop.svg");
+    background-image: url("./images/bg-boost-desktop.svg");
 }
 
 #logo-footer {

@@ -10,6 +10,10 @@ li {
     margin: 6px;
 }
 
+ul li a {
+    text-decoration: none;
+    color: white;
+}
 h1 {
     font-size: 75px;
 }
@@ -70,12 +74,10 @@ hr {
     background-image: url("./images/bg-boost-desktop.svg");
 }
 
-#logo-footer {
-    color: white;
-}
+ 
 
 .footer {
-    background-color:#222242;
+    background-color:#232127;
 }
 
 .showLinks {

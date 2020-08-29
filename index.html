@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="container ">
+    <div class="row my-5">
+      <nav class="col-md-6 d-flex justify-content-between">
+        <li><img src="/images/logo.svg" alt=""></li>
+        <li> Features </li>
+        <li> Princing </li>
+        <li> Resources </li>
+      </nav>
+      <div class="col-md-6 d-flex justify-content-end">
+        <a href="" class="btn mr-1 rounded-pill w-25" > Login</a>
+        <a href="" class="btn btn-info rounded-pill w-25">sign Up</a>
+      </div>
+
+    </div>
+
+    <section class="row pt-5">
+      <div class="col-md-6 pt-5">
+        <h1 class="font-weight-bold"> More than just shorter links </h1>
+        <p> Build your bra,d's recognition and get detailed insights on how your links are performing.</p>
+        <a href="" class="btn btn-info rounded-pill">Get started</a>
+      </div>
+      <div class="col-md-6"><img src="/images/illustration-working.svg" alt=""> </div>
+
+    </section>
+
+    <div class=' div' style="background-color:#222242 ; border-radius: 15px; ">
+      <div class="div-row mt-5">
+        <div class=" div-input d-flex justify-content-center  ">
+
+          <input id="linkInput" type="text" class='  col-10 input  h-50 ' placeholder="Shoten a link here...">
+          <div class="  col-md-2">
+            <button id="testBtn" class='w-100 shorten-btn btn btn-info'> Shorten it!</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+  </header>
+
+  <main class="main">
+
+    <section class="w-100 section1">
+
+      <div class="links">
+        <!-- <div class="showLinks d-flex justify-content-between align-items-baseline">
+          <p>https://www.youtube.com/watch?v=azwzZIZHXzk&lis..</p>
+          
+          <div>
+            <a href="https://rel.ink/kzq0vg">https://rel.ink/kzq0vg</a>
+            <button class="btn ml-3">Copy</button>
+          </div>
+        </div> -->
+      </div>
+
+      
+      <div class="text-center" style="padding-top: 8%;">
+        <h2>
+          Advanced Statistics
+        </h2>
+        <p> Build your bra,d's recognition and get detailed insights on how your links are performing.</p>
+      </div>
+
+      <div class="row d-flex justify-content-center" style="padding: 7%;">
+        <div class="bg-light col-md-3" style=" transform: translateY(-20%);">
+          <div class="div-img "> <img class="w-75" src="/images/icon-brand-recognition.svg" alt=""> </div>
+          <h2> Brand Recognition</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+        <hr class="align-self-center">
+        <div class="bg-light col-md-3">
+          <div class="div-img p-2"> <img class="w-75" src="/images/icon-detailed-records.svg" alt=""> </div>
+          <h2>Detailed Records</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+        <hr class="align-self-center">
+
+        <div class="bg-light col-md-3 " style="     transform: translateY(20%);">
+          <div class="div-img"><img class="w-75" src="/images/icon-fully-customizable.svg" class='' alt=""> </div>
+          <h2>Fully Customizable</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="background-color:#222242 ;" class="w-100">
+      <div class="section2 p-5 text-light text-center w-100 ">
+        <h2> Boosts your links today</h2>
+        <a href="" class="btn btn-info rounded-pill">Get started</a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="row text-light  pt-5">
+      <div class="col-md-3">
+        <img id='logo-footer' src="/images/logo.svg" alt="">
+
+      </div>
+      <div class=" row col-md-6">
+        <ul>
+          <li>
+            <h3>Features</h3>
+          </li>
+          <li>Link Shortening</li>
+          <li>Branded Links</li>
+          <li>Analitics</li>
+        </ul>
+        <ul>
+          <li>
+            <h3>Resources</h3>
+          </li>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+        <ul>
+          <li>
+            <h3>Company</h3>
+          </li>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <ul class="col-md-3 row">
+        <li><img src="/images/icon-facebook.svg" alt=""></li>
+        <li><img src="/images/icon-twitter.svg" alt=""></li>
+        <li><img src="/images/icon-pinterest.svg" alt=""></li>
+        <li> <img src="/images/icon-instagram.svg" alt=""></li>
+      </ul>
+    </div>
+
+  </footer>
+
+
+  <script src="main.js"></script>
+ 
+ <script>
+// function  CopyFunction() {
+//   console.log('function copy')
+//   var copyText = document.getElementById("myinput");
+//   copyText.select();
+//   copyText.setSelectionRange(0, 99999)
+//   document.execCommand("copy");
+//   alert("Copied the text: " + copyText.value);
+// }
+</script>
+   
+
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    header {
+
+      margin-bottom: 0;
+
+    }
+
+    li {
+      list-style: none;
+      margin: 6px;
+    }
+
+    h1 {
+      font-size: 75px;
+    }
+
+    .div-row {
+      background-image: url('/images/bg-shorten-desktop.svg');
+      border-radius: 15px;
+
+    }
+
+    .shorten-btn {
+      padding: 15px;
+      border-radius: 15px;
+
+    }
+
+    .shorten {
+      padding: 0;
+
+    }
+
+    .div-input {
+      padding: 35px 60px;
+      border-radius: 15px;
+    }
+
+    .input {
+      border-radius: 15px;
+      padding: 0.75rem;
+    }
+
+    .div {
+      transform: translateY(0.75in);
+    }
+
+    .section1 {
+      background-color: #d6d9e473;
+    }
+
+    .div-img {
+      background-color: #222242;
+      border-radius: 50%;
+      width: 24%;
+      height: 55px;
+      /* float: left; */
+      padding: 2%;
+      text-align: center;
+      transform: translateX(20%) translateY(-50%);
+    }
+
+    hr {
+      border: 3px solid rgb(110, 220, 228);
+      width: 3%;
+      /* height: 152%; */
+      /* height: 2px; */
+      margin: 0;
+    }
+
+    .section2 {
+      background-image: url("/images/bg-boost-desktop.svg");
+    }
+    #logo-footer{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container ">
+    <div class="row my-5">
+      <nav class="col-md-6 d-flex justify-content-between">
+        <li><img src="/images/logo.svg" alt=""></li>
+        <li> Features </li>
+        <li> Princing </li>
+        <li> Resources </li>
+      </nav>
+      <div class="col-md-6 d-flex justify-content-end">
+        <a href="" class="btn"> Login</a>
+        <a href="" class="btn btn-info rounded-pill w-25">sign Up</a>
+      </div>
+
+    </div>
+
+    <section class="row pt-5">
+      <div class="col-md-6 pt-5">
+        <h1 class="font-weight-bold"> More than just shorter links </h1>
+        <p> Build your bra,d's recognition and get detailed insights on how your links are performing.</p>
+        <a href="" class="btn btn-info rounded-pill">Get started</a>
+      </div>
+      <div class="col-md-6"><img src="/images/illustration-working.svg" alt=""> </div>
+
+    </section>
+
+    <div class=' div' style="background-color:#222242 ; border-radius: 15px; ">
+      <div class="div-row mt-5">
+       
+<form action="" method="POST" class='  div-input d-flex justify-content-center  '>
+      <input type="text" class="w-100 input  h-50  col-10 " name="fullUrl" id="fullUrl" placeholder="Shoten a link here...">
+        <div class="  col-md-2">
+            <button type="submit" class='w-100 shorten-btn btn btn-info'> Shorten it!</button>
+          </div>
+</form>
+        
+      </div>
+    </div>
+ 
+  </header>
+
+  <main class=" w-100  ">
+
+    <section class=" section1">
+
+      <div class="text-center w-100  " style="padding-top: 8%;">
+        <table class="container mb-5 ">
+            <thead >
+              <tr  >
+                <th   class=" p-3">Full URL</th>
+                <th>Short URL</th>
+                <th>Clicks</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                      <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                      <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                      <td><%= shortUrl.clicks %></td>
+                    </tr>
+                  <% }) %>
+              
+            </tbody>
+          </table>
+        <h2>
+          Advanced Statistics
+        </h2>
+        <p> Build your bra,d's recognition and get detailed insights on how your links are performing.</p>
+      </div>
+
+      <div class="row d-flex justify-content-center " style="padding: 7%;">
+        <div class="bg-light col-md-3" style=" transform: translateY(-20%);">
+          <div class="div-img "> <img class="w-75" src="/images/icon-brand-recognition.svg" alt=""> </div>
+          <h2> Brand Recognition</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+        <hr class="align-self-center">
+        <div class="bg-light col-md-3">
+          <div class="div-img p-2"> <img class="w-75" src="/images/icon-detailed-records.svg" alt=""> </div>
+          <h2>Detailed Records</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+        <hr class="align-self-center">
+
+        <div class="bg-light col-md-3 " style="     transform: translateY(20%);">
+          <div class="div-img"><img class="w-75" src="/images/icon-fully-customizable.svg" class='' alt=""> </div>
+          <h2>Fully Customizable</h2>
+          <p> Boost your brand recognition with each click Generic links don't mean a thing Branded links help instil
+            confidence in your content. </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="background-color:#222242 ;" class="w-100">
+      <div class="section2 p-5 text-light text-center w-100 ">
+        <h2> Boosts your links today</h2>
+        <a href="" class="btn btn-info rounded-pill">Get started</a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer style="background-color:#222242 ;">
+    <div class="row text-light  pt-5">
+   <div  class="col-md-3">
+     <img id='logo-footer' src="/images/logo.svg" alt="">
+
+   </div>   
+      <div  class=" row col-md-6" >
+        <ul>
+          <li>
+            <h3>Features</h3>
+          </li>
+          <li>Link Shortening</li>
+          <li>Branded Links</li>
+          <li>Analitics</li>
+        </ul>
+        <ul>
+          <li>
+            <h3>Resources</h3>
+          </li>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+        <ul>
+          <li>
+            <h3>Company</h3>
+          </li>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <ul  class="col-md-3 row" >
+        <li><img src="/images/icon-facebook.svg" alt=""></li>
+        <li><img src="/images/icon-twitter.svg" alt=""></li>
+        <li><img src="/images/icon-pinterest.svg" alt=""></li>
+        <li> <img src="/images/icon-instagram.svg" alt=""></li>
+      </ul>
+    </div>
+
+  </footer>
+</body>
+
+</html>

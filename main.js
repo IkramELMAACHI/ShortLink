@@ -8,12 +8,12 @@ var input = document.getElementById('linkInput');
 var shortBtn = document.getElementById('testBtn');
 var links = document.querySelector('.links');
 
-
-shortBtn.addEventListener('click', function () {
-    console.log(this);
-
-    if (input.value) {
-
+var i = 0 
+shortBtn.addEventListener('click', function ( ) {
+  
+console.log(i);
+    console.log(this); 
+    if (input.value) { 
         // POST
         var http = new XMLHttpRequest();
         var url = 'https://rel.ink/api/links/';
@@ -29,6 +29,7 @@ shortBtn.addEventListener('click', function () {
 
             if (http.readyState == XMLHttpRequest.DONE && http.status == 201) {
                 var data = JSON.parse(http.responseText);
+                i++ ;
                 console.log(data);
                 console.log(`https://rel.ink/${data.hashid}`);
                 addNewLink(data);
@@ -41,19 +42,22 @@ shortBtn.addEventListener('click', function () {
 
 
 });
-function  CopyFunction() {
+
+
+function  CopyFunction(x) {
+
     console.log('function copy')
-    var copyText = document.getElementById("myinput");
+    var copyText = document.querySelector(`#myinput${x}`   )
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-   
+   i++ ;
   }
 
 function addNewLink(data){
     
     // https://rel.ink/kzq0vg
-
+  
     var url = data.url.length < 32 ? data.url : data.url.substr(0, 32) + '...';  
     var shorthLink = `https://rel.ink/${data.hashid}`;
 
@@ -62,8 +66,8 @@ function addNewLink(data){
       <p>${url}</p>
       
       <div class = 'd-flex' >
-        <input id = 'myinput' value="${shorthLink}" class='  col-10 input  h-100 ' /> 
-        <button onclick= CopyFunction() class='  btn btn-info ml-3' >Copy</button>
+        <input id = 'myinput${i}' value="${shorthLink}" class='  col-10 copyInput  input h-100 ' /> 
+        <button onclick= CopyFunction(${i}) class='  btn btn-info ml-3' >Copy</button>
       </div>
     
     </div>`;
